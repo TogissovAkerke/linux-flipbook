@@ -1,135 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My Digital Flipbook</title>
-
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Linux Files & Directories | Interactive Flipbook</title>
 <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
-
 <style>
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: #e8edf5;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-h1 { color: #26334a; }
-
-#book {
-  margin: 20px auto;
-}
-
-.page {
-  background: white;
-  border: 1px solid #ddd;
-  padding: 25px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.page h2 {
-  color: #284a83;
-}
-
-.cover {
-  background: #24477e;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.cover h2 { color: white; }
-
-.controls {
-  display: flex;
-  gap: 15px;
-}
-
-button {
-  background: #24477e;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
-  cursor: pointer;
-}
-</style>
-</head>
-
-<body>
-
-<h1>My Digital Flipbook</h1>
-
-<div id="book">
-
-  <div class="page cover" data-density="hard">
-    <h2>MY FIRST BOOK</h2>
-    <p>Digital Edition 2026</p>
-  </div>
-
-  <div class="page">
-    <h2>Page 1</h2>
-    <p>Welcome to my digital book.</p>
-  </div>
-
-  <div class="page">
-    <h2>Page 2</h2>
-    <p>This book has realistic turning pages.</p>
-  </div>
-
-  <div class="page">
-    <h2>Page 3</h2>
-    <p>You can add your own text and images.</p>
-  </div>
-
-  <div class="page">
-    <h2>Page 4</h2>
-    <p>Each HTML page becomes a book page.</p>
-  </div>
-
-  <div class="page cover" data-density="hard">
-    <h2>THE END</h2>
-  </div>
-
-</div>
-
-<div class="controls">
-  <button onclick="book.flipPrev()">Previous</button>
-  <button onclick="book.flipNext()">Next</button>
-</div>
-
+:root{--navy:#14233e;--blue:#2563eb;--mint:#10b981;--paper:#fffdf8}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#314c78,#101b30 75%);font-family:system-ui,-apple-system,sans-serif;color:#182b45;min-height:100vh}.shell{max-width:1100px;margin:auto;padding:22px 14px 30px}header{text-align:center;color:#fff;margin-bottom:18px}header h1{font-size:clamp(23px,4vw,36px);margin:4px}header p{opacity:.8;margin:6px}.book-area{display:flex;justify-content:center;align-items:center;min-height:540px}#book{margin:auto}.page{background:var(--paper);border:1px solid #ded9cb;padding:23px 25px;overflow:auto;box-shadow:inset 0 0 30px #e8e0d366;height:100%}.page h2{font-size:22px;margin:6px 0 12px;color:#1d3762}.page h3{font-size:14px;margin:15px 0 7px;color:#1d3762}.page p,.page li{font-size:13px;line-height:1.48}.page ul{padding-left:18px}.kicker{color:#3973c8;text-transform:uppercase;font-weight:800;font-size:10px;letter-spacing:1.4px}.terminal{background:#111d30;border-radius:10px;padding:13px;color:#d1f8e6;font:12px/1.65 ui-monospace,monospace;white-space:pre-wrap;margin:12px 0}.terminal .prompt{color:#7dd3fc}.cmds{display:flex;gap:6px;flex-wrap:wrap}.chip{background:#eaf1ff;color:#17447d;border:1px solid #c6d9ff;border-radius:7px;padding:6px 10px;font:700 12px ui-monospace,monospace;cursor:pointer}.chip:hover,.chip:focus{background:#cfe0ff}.info{min-height:54px;background:#f0f6ff;border-left:3px solid #3b82f6;border-radius:5px;padding:10px;font-size:12px;margin-top:10px}.exercise{background:#f0faf5;border:1px solid #bce8cf;border-radius:10px;padding:11px;margin-top:12px}.exercise strong{font-size:12px}.exercise input{width:100%;padding:9px;border:1px solid #c5d4c9;border-radius:6px;margin:8px 0;font:12px ui-monospace,monospace}.exercise button,.nav button{background:#2563eb;color:white;border:0;border-radius:8px;padding:9px 15px;cursor:pointer;font-weight:700}.feedback{font-size:12px;min-height:18px;margin-top:7px}.cover{background:linear-gradient(150deg,#10233f,#245c9a 68%,#1b9a9c);color:white;display:flex;flex-direction:column;justify-content:center;text-align:center;align-items:center}.cover h2{color:white;font-size:35px}.cover .big{font-size:68px;margin:10px}.cover p{font-size:15px}.cover .small{font-size:12px;opacity:.8}.nav{display:flex;justify-content:center;align-items:center;gap:12px;margin:12px auto;color:white;flex-wrap:wrap}.nav button{background:#e6efff;color:#17345b}.nav button:disabled{opacity:.35;cursor:not-allowed}.nav span{min-width:110px;text-align:center;font-size:13px}.note{text-align:center;color:#b6c8e3;font-size:12px;margin-top:12px}@media(max-width:520px){.shell{padding:14px 6px}.page{padding:16px}.page h2{font-size:19px}.book-area{min-height:510px}}
+</style></head><body><div class="shell"><header><h1>Linux Command Lab</h1><p>Files & Directories · Interactive Learning Flipbook</p></header><main class="book-area"><div id="book">
+<section class="page cover" data-density="hard"><div class="big">⌘</div><div class="kicker" style="color:#a8f0ee">LINUX ESSENTIALS</div><h2>Files &<br>Directories</h2><p>Learn • Explore • Practice</p><p class="small">Five interactive lesson pages</p></section>
+<section class="page"><div class="kicker">Lesson 01 / Navigation</div><h2>Explore the File System</h2><p>Linux organizes files in a directory tree. Your terminal starts in a working directory.</p><div class="terminal"><span class="prompt">student@linux:~$</span> pwd
+/home/student
+<span class="prompt">student@linux:~$</span> ls
+Documents  Downloads  Pictures
+<span class="prompt">student@linux:~$</span> cd Documents</div><h3>Tap a command to learn more</h3><div class="cmds"><button class="chip" data-info="pwd prints the full path of your current working directory.">pwd</button><button class="chip" data-info="ls lists files and folders. Try ls -la to include hidden entries.">ls</button><button class="chip" data-info="cd changes directories. cd .. moves to the parent; cd ~ returns home.">cd</button></div><div class="info" aria-live="polite">Select a command above.</div><div class="exercise"><strong>Try it: Which command shows your current directory?</strong><input aria-label="Answer lesson 1" placeholder="Type a command" data-answer="pwd"><button class="check">Check answer</button><div class="feedback" aria-live="polite"></div></div></section>
+<section class="page"><div class="kicker">Lesson 02 / Create</div><h2>Create Files & Folders</h2><p>Use <b>mkdir</b> to create a directory and <b>touch</b> to create an empty file.</p><div class="terminal"><span class="prompt">student@linux:~$</span> mkdir Linux_Lab
+<span class="prompt">student@linux:~$</span> cd Linux_Lab
+<span class="prompt">student@linux:~/Linux_Lab$</span> touch notes.txt
+<span class="prompt">student@linux:~/Linux_Lab$</span> ls
+notes.txt</div><h3>Explore the options</h3><div class="cmds"><button class="chip" data-info="mkdir projects creates a directory named projects.">mkdir</button><button class="chip" data-info="mkdir -p work/week1 creates nested directories, including missing parents.">mkdir -p</button><button class="chip" data-info="touch report.txt creates an empty file if it does not exist, or updates its timestamps if it does.">touch</button></div><div class="info" aria-live="polite">Select a command above.</div><div class="exercise"><strong>Try it: Create a directory named testing.</strong><input aria-label="Answer lesson 2" placeholder="Type a command" data-answer="mkdir testing"><button class="check">Check answer</button><div class="feedback" aria-live="polite"></div></div></section>
+<section class="page"><div class="kicker">Lesson 03 / Organize</div><h2>Copy & Move</h2><p>Copy a file without changing the original, or move/rename it with <b>mv</b>.</p><div class="terminal"><span class="prompt">student@linux:~/Linux_Lab$</span> cp notes.txt copy.txt
+<span class="prompt">student@linux:~/Linux_Lab$</span> mv copy.txt final.txt
+<span class="prompt">student@linux:~/Linux_Lab$</span> ls
+final.txt  notes.txt</div><h3>Command details</h3><div class="cmds"><button class="chip" data-info="cp source.txt destination.txt copies a file. The source remains.">cp</button><button class="chip" data-info="cp -r source_dir backup_dir copies a directory recursively.">cp -r</button><button class="chip" data-info="mv old.txt new.txt renames a file; mv file.txt folder/ moves it.">mv</button></div><div class="info" aria-live="polite">Select a command above.</div><div class="exercise"><strong>Try it: Rename old.txt to new.txt.</strong><input aria-label="Answer lesson 3" placeholder="Type a command" data-answer="mv old.txt new.txt"><button class="check">Check answer</button><div class="feedback" aria-live="polite"></div></div></section>
+<section class="page"><div class="kicker">Lesson 04 / Inspect</div><h2>View & Find Files</h2><p>Read file contents and locate files by name.</p><div class="terminal"><span class="prompt">student@linux:~$</span> cat notes.txt
+My Linux notes
+<span class="prompt">student@linux:~$</span> less notes.txt
+<span class="prompt">student@linux:~$</span> find . -name "*.txt"
+./notes.txt
+./Linux_Lab/final.txt</div><h3>Command details</h3><div class="cmds"><button class="chip" data-info="cat prints a file's contents directly in the terminal.">cat</button><button class="chip" data-info="less opens a scrollable file viewer. Press q to quit.">less</button><button class="chip" data-info="find . -name '*.txt' searches recursively from the current directory for matching names.">find</button></div><div class="info" aria-live="polite">Select a command above.</div><div class="exercise"><strong>Try it: Display the contents of notes.txt.</strong><input aria-label="Answer lesson 4" placeholder="Type a command" data-answer="cat notes.txt"><button class="check">Check answer</button><div class="feedback" aria-live="polite"></div></div></section>
+<section class="page"><div class="kicker">Lesson 05 / Clean Up</div><h2>Remove Safely</h2><p>Delete files and empty directories carefully. Terminal deletion usually bypasses the Trash.</p><div class="terminal"><span class="prompt">student@linux:~/Linux_Lab$</span> rm final.txt
+<span class="prompt">student@linux:~/Linux_Lab$</span> mkdir empty_folder
+<span class="prompt">student@linux:~/Linux_Lab$</span> rmdir empty_folder</div><h3>Know the difference</h3><div class="cmds"><button class="chip" data-info="rm file.txt removes a file. Confirm the filename before running it.">rm</button><button class="chip" data-info="rmdir folder removes a directory only when it is empty.">rmdir</button><button class="chip" data-info="rm -r folder removes a directory and its contents recursively. Use with extreme caution.">rm -r</button></div><div class="info" aria-live="polite">Select a command above.</div><div class="exercise"><strong>Final check: Remove an empty directory named temp.</strong><input aria-label="Answer lesson 5" placeholder="Type a command" data-answer="rmdir temp"><button class="check">Check answer</button><div class="feedback" aria-live="polite"></div></div></section>
+</div></main><nav class="nav"><button id="prev" aria-label="Previous page">← Previous</button><span id="counter">Cover</span><button id="next" aria-label="Next page">Next →</button></nav><div class="note">Click a command to reveal its meaning. Type an answer to check your understanding. The page-turning library requires internet access.</div></div>
 <script>
-const book = new St.PageFlip(
-  document.getElementById("book"),
-  {
-    width: 350,
-    height: 480,
-    size: "stretch",
-    minWidth: 220,
-    maxWidth: 350,
-    minHeight: 300,
-    maxHeight: 480,
-    showCover: true,
-    usePortrait: true,
-    flippingTime: 900,
-    maxShadowOpacity: 0.5,
-    mobileScrollSupport: false
-  }
-);
-
-book.loadFromHTML(
-  document.querySelectorAll(".page")
-);
-</script>
-
-</body>
-</html>
+const pages=document.querySelectorAll('#book .page');
+let book;
+function setPage(i){document.getElementById('counter').textContent=i===0?'Cover':`Lesson ${i} of 5`;document.getElementById('prev').disabled=i===0;document.getElementById('next').disabled=i===pages.length-1;}
+if(window.St && St.PageFlip){book=new St.PageFlip(document.getElementById('book'),{width:390,height:510,size:'stretch',minWidth:280,maxWidth:390,minHeight:410,maxHeight:510,showCover:true,usePortrait:true,flippingTime:750,maxShadowOpacity:.45,mobileScrollSupport:false});book.loadFromHTML(pages);book.on('flip',e=>setPage(e.data));setPage(0);document.getElementById('prev').onclick=()=>book.flipPrev();document.getElementById('next').onclick=()=>book.flipNext();}else{document.querySelector('.note').textContent='The page-turning library could not load. Check your internet connection and refresh.';pages.forEach((p,i)=>p.style.display=i===0?'block':'none');let current=0;const go=d=>{pages[current].style.display='none';current=Math.max(0,Math.min(pages.length-1,current+d));pages[current].style.display='block';setPage(current)};document.getElementById('prev').onclick=()=>go(-1);document.getElementById('next').onclick=()=>go(1);setPage(0);}
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{b.closest('.page').querySelector('.info').textContent=b.dataset.info}));
+document.querySelectorAll('.check').forEach(b=>b.addEventListener('click',()=>{const ex=b.closest('.exercise'),inp=ex.querySelector('input'),answer=inp.dataset.answer,actual=inp.value.trim().replace(/\s+/g,' '),ok=actual===answer;const f=ex.querySelector('.feedback');f.textContent=ok?'✓ Correct! Well done.':`Not quite. Hint: ${answer.split(' ')[0]} is the command to start with.`;f.style.color=ok?'#08794c':'#a54b0a'}));
+document.querySelectorAll('.exercise input').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter')i.closest('.exercise').querySelector('.check').click()}));
+</script></body></html>
